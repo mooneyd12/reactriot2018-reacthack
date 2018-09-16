@@ -33,7 +33,7 @@
   text-align: left;
 }
 
-.status-content {
+.status-content, .accidents-content {
   padding: 10px;
   display: -webkit-flex;
   display: flex;
@@ -44,7 +44,7 @@
   border-bottom: 1px solid #ccc;
 }
 
-.line-name, .status-desc {
+.line-name, .status-desc, .location-name, .update-desc {
   font-size: 14px;
 }
 
@@ -62,4 +62,8 @@
 
 .status-reason {
   width: 100%;
+}
+
+.update-desc, .update-comments {
+  margin-top:0 ;
 }
