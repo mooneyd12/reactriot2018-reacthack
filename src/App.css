@@ -1,3 +1,12 @@
 .App {
   text-align: center;
 }
+
+.status {
+  margin: 20px 10px;
+  border: 1px solid #ccc;
+  background-colod: white;
+  color: #090909;
+  letter-spacing: 1px;
+  font-family: century gothic;
+}
