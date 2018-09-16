@@ -16,7 +16,6 @@ class RoadStatus extends React.Component {
       return data.json();
     })
     .then((res) => {
-      console.log(res);
       let accidentRow = res.map((results) => {
         return (
           <div key={results.id} className="accidents-content">
@@ -24,19 +23,22 @@ class RoadStatus extends React.Component {
           <p className="update-desc">{results.currentUpdate}</p>
           <p className="update-comments">{results.comments}</p>
           </div>
-        );
+        )
       });
       this.setState({
         accidentRow: accidentRow
       });
-    });
+    })
+    .catch((err) => {
+        console.log('No data');
+    })
   }
 
   render(){
     return (
       <div className="status">
       <h3 className="status-header">Road</h3>
-      {this.state.accidentRow}
+      {(this.state.accidentRow.length === 0) ? <div className="no-updates">No updates</div> : this.state.accidentRow}
       </div>
     )
   }
