@@ -22,7 +22,7 @@ class RoadStatus extends React.Component {
           <div key={results.id} className="accidents-content">
           <h5 className="location-name">{results.location}</h5>
           <p className="update-desc">{results.currentUpdate}</p>
-          <p className="update-desc">{results.comments}</p>
+          <p className="update-comments">{results.comments}</p>
           </div>
         );
       });
