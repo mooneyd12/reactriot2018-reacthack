@@ -35,8 +35,22 @@
   border-bottom: 1px solid #ccc;
 }
 
-.line-name {
-  width: 50%;
-  text-transform: uppercase;
+.line-name, .status-desc {
   font-size: 14px;
+}
+
+.line-name {
+  flex: 0.5;
+  text-transform: uppercase;
+}
+
+.status-desc {
+  text-align: right;
+  flex: 0.5;
+  position: relative;
+  top: 7px;
+}
+
+.status-reason {
+  width: 100%;
 }
