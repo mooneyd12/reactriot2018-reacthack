@@ -22,9 +22,10 @@ componentDidMount(){
       .then(searchResults => {
         let statusRow = searchResults.map(res => {
           return (
-            <div key={res.id}>
+            <div key={res.id} className="status-content">
               <h5>{res.id}</h5>
               <p>{res.lineStatuses[0].statusSeverityDescription}</p>
+              <p>{res.lineStatuses[0].reason}</p>
             </div>
           );
         });
@@ -41,9 +42,7 @@ componentDidMount(){
   render(){
     return <div>
       <h3 className="status-header">Status</h3>
-        <div>
-          {this.state.statusRow}
-        </div>
+      {this.state.statusRow}
       </div>
   }
 }
