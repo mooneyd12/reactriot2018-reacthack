@@ -4,6 +4,9 @@ import myKeys from './config.js';
 class RoadStatus extends React.Component {
   constructor(props){
     super(props);
+    this.state = {
+      accidentRow: []
+    }
   }
 
   componentDidMount(){
@@ -13,7 +16,17 @@ class RoadStatus extends React.Component {
       return data.json();
     })
     .then((res) => {
-
+      let accidentRow = res.map((results) => {
+        return (
+          <div key={res.id} className="accidents-content">
+          <h5 className="location-name">{res.location}</h5>
+          <p className="update-desc">{res.currentUpdate}</p>
+          </div>
+        )
+      })
+      this.setState({
+        accidentRow: accidentRow
+      })
     })
     .catch((err) =>{
       console.log('Failed to fetch data');
@@ -24,6 +37,7 @@ class RoadStatus extends React.Component {
     return (
       <div className="status">
       <h3 className="status-header">Road</h3>
+      {this.state.accidentRow}
       </div>
     )
   }
