@@ -7,6 +7,15 @@
   padding: 30px;
 }
 
+.brand-name {
+  margin: 20px;
+}
+
+.brand-name span {
+  font-style: italic;
+  color: rgb(96, 223, 44);
+}
+
 .status {
   margin: 20px 20px 40px 20px;
   border: 1px solid #ccc;
