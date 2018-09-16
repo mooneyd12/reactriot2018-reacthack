@@ -48,6 +48,10 @@
   font-size: 14px;
 }
 
+.status-content:nth-child(odd){
+  background-color: rgba(127, 209, 0, 0.61);
+}
+
 .line-name {
   flex: 0.5;
   text-transform: uppercase;
