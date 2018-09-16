@@ -67,3 +67,7 @@
 .update-desc, .update-comments {
   margin-top:0 ;
 }
+
+.no-updates{
+  padding: 10px;
+}
