@@ -7,7 +7,8 @@ class RoadStatus extends React.Component {
   }
   render(){
     return (
-      <div>
+      <div className="status">
+      <h3 className="status-header">Road</h3>
       </div>
     )
   }
